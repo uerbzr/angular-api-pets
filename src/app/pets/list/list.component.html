@@ -1,0 +1,24 @@
+<ul>
+  <li *ngFor="let p of pets">{{ p.name }}</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>name</td>
+      <td>description</td>
+      <td>age</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pets">
+      <td>
+        <a routerLink="/pets/{{ p.id }}">{{ p.id }}</a>
+      </td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.description }}</td>
+      <td>{{ p.age }}</td>
+    </tr>
+  </tbody>
+</table>
